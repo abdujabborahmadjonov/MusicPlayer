@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.PlayingFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:padding="10dp">
+
+        <!--back button-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back" />
+        <!--title-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:text="World Of Music"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Song Image-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="125dp"
+            app:cardElevation="0dp"
+            app:shapeAppearanceOverlay="@style/curved"
+            app:strokeColor="#D3EBFF"
+            app:strokeWidth="4dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:padding="50dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/img" />
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:layout_gravity="end"
+                android:layout_width="200dp"
+                android:layout_marginEnd="0dp"
+                android:thumb="@drawable/round_red"
+                android:paddingTop="130dp"
+                android:id="@+id/seekVolume"
+                android:layout_marginBottom="100dp"
+                android:layout_height="match_parent"
+                android:rotation="270" />
+
+            <ImageView
+                android:layout_gravity="bottom|end"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="23dp"
+                android:src="@drawable/baseline_volume_up_24"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+    </FrameLayout>
+    <!--Song Name-->
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="60dp"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:layout_marginStart="60dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingHorizontal="10dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="song name"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!--seekbar-->
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBarPA"
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="26dp"
+            android:layout_marginVertical="10dp"
+            android:thumbTint="#FF5722" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--time-->
+            <TextView
+                android:id="@+id/seekBarStartPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="start"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+            <!--Song Length-->
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|end"
+                android:text="end"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--repeat-->
+
+        <!--Equalizer-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <!--Pervious btn-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/prevBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D3EBFF"
+            app:icon="@drawable/ic_before"
+            app:iconSize="40dp" />
+
+        <!--Play/Pause btn-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/playPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            app:icon="@drawable/ic_pause"
+            app:iconSize="40dp"
+            app:iconTint="@color/white"
+            app:shapeAppearanceOverlay="@style/curved" />
+
+        <!--Next btn-->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D3EBFF"
+            app:icon="@drawable/ic_next"
+            app:iconSize="40dp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
